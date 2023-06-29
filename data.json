@@ -1,0 +1,65 @@
+[
+    {
+        "model": "catalog.category",
+        "pk": 1,
+        "fields": {
+            "name": "игры",
+            "description": "развлечения"
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 2,
+        "fields": {
+            "name": "вкусности",
+            "description": ""
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 3,
+        "fields": {
+            "name": "комплектующие",
+            "description": "электроника"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 1,
+        "fields": {
+            "name": "ведьмак",
+            "description": "тест_1",
+            "picture": "",
+            "category": 1,
+            "price": 300,
+            "create_date": "2018-09-11T18:00:00Z",
+            "last_modified_date": "2022-04-15T18:00:00Z"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 2,
+        "fields": {
+            "name": "асасин",
+            "description": "тест_2",
+            "picture": "",
+            "category": 1,
+            "price": 200,
+            "create_date": "2018-09-11T18:00:00Z",
+            "last_modified_date": "2022-04-15T06:00:00Z"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 3,
+        "fields": {
+            "name": "чипсы",
+            "description": "вкусно но вредно",
+            "picture": "",
+            "category": 2,
+            "price": 80,
+            "create_date": "2023-06-27T06:00:00Z",
+            "last_modified_date": "2023-06-27T06:00:00Z"
+        }
+    }
+]
