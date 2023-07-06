@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'catalog',
         'USER': 'postgres',
         'PASSWORD': '123456',
-        'HOST': '172.28.255.155',
+        'HOST': '192.168.56.101',
         'PORT': 49153,
     }
 }
@@ -128,6 +128,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -1,0 +1,31 @@
+{% extends 'catalog/base.html'%}
+
+{% block content %}
+<section class="py-5 text-center container">
+    <h1 class="fw-light">получилось</h1>
+</section>
+
+<div class="col-md-9">
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6">
+
+                    <div class="col-md-6">
+                        <h1 class="display-5 fw-bolder">Название продукта: {{ item.name }}</h1>
+                        <div class="fs-5 mb-5">
+                            <span class="text">Цена: {{ item.price }} рублей </span>
+
+                        </div>
+                        <p class="lead"> Описание товара: {{ item.description }} </p>
+                        <p class="lead">Дата создания карточки: {{ item.create_date }}</p>
+                        <p class="lead">Дата обновления карточки: {{ item.last_modified_date }}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
