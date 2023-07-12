@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView
 from catalog.admin import Category, Product
 
 def home(request):
