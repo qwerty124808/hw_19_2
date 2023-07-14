@@ -7,16 +7,16 @@
 
 <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for product in products_list %}
+        {% for object in object_list %}
         <div class="col">
             <div class="card shadow-sm">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center button">
                         <div class="card-text">
                             <a class="card-text" type="submit"
-                                href="/products/product/?product_id={{ product.pk }}">{{product|title}}</a>
-                                <p class="lead"> {{ product.description | slice:100 }} </p>
-                                <img src="{% media_path product.picture %}" width="100"/>
+                                href="/products/product/{{ object.pk }}">{{object|title}}</a>
+                                <p class="lead"> {{ object.description | slice:100 }} </p>
+                                <img src="{% media_path object.picture %}" width="100"/>
                         </div>
                     </div>
                 </div>
