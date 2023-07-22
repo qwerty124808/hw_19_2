@@ -15,8 +15,13 @@
                         <div class="card-text">
                             <a class="card-text" type="submit"
                                 href="/products/product/{{ object.pk }}">{{object|title}}</a>
-                                <p class="lead"> {{ object.description | slice:100 }} </p>
-                                <img src="{% media_path object.picture %}" width="100"/>
+                            <p class="lead"> {{ object.description | slice:100 }} </p>
+                            <img src="{% media_path object.picture %}" width="100" />
+                            {% for form in formset %}
+                                {% if form.product == object and form.is_published == True %}
+                                    <h6 class="text-success">{{ form.version_name }} {{form.version_number}}</h6>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

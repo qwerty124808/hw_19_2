@@ -8,12 +8,20 @@
 
 <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col-12 mb-5">
+            <a class="btn btn-outline-primary" href="{% url 'catalog:create_category' %}">Добавить категорию</a>
+        </div>
         {% for object in object_list %}
         <div class="col">
             <div class="card shadow-sm">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center button">
-                        <a class="card-text" type="submit" href="/products/category/?category_id={{ object.pk }}">{{object|title}}</a>
+                        <a class="card-text" type="submit"
+                            href="/products/category/?category_id={{ object.pk }}">{{object|title}}</a>
+                    </div>
+                    <div class="btn-group">
+                        <a href="{% url 'catalog:delete_category' object.pk %}" type="button"
+                            class="btn btn-sm btn-outline-secondary">Delete</a>
                     </div>
                 </div>
             </div>
